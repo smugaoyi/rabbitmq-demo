@@ -4,6 +4,13 @@ import com.rabbitmq.client.*;
 
 import java.io.IOException;
 
+
+/**
+ * work queue模式
+ * 	一个生产者多个消费者
+ * 	消息不会重复消费
+ * 	采用轮询的方式发给各个consumer
+ */
 public class ConsumerTest {
     private static final String QUEUE = "test.queue";
     public static void main(String[] args) {

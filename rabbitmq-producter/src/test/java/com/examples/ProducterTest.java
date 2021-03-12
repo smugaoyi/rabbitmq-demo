@@ -7,6 +7,12 @@ import com.rabbitmq.client.ConnectionFactory;
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
+/**
+ * work queue模式
+ * 	一个生产者多个消费者
+ * 	消息不会重复消费
+ * 	采用轮询的方式发给各个consumer
+ */
 public class ProducterTest {
     private static final String QUEUE = "test.queue";
 
